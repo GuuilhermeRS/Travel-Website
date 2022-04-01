@@ -11,7 +11,8 @@
 
 * {
   margin: 0;
-  padding: 0;;
+  padding: 0;
+  color: var(--light-color);
 }
 
 body  {
@@ -66,9 +67,63 @@ body  {
 
 .nav a{
   text-decoration: none;
-  color: var(--light-color);
 
   font-family: var(--heading-5);
   font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* Home */
+.home {
+  margin: 10% 8.6%; /* 10% 165px*/
+
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home .title {
+  width: 450px;
+  height: 382px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home h5 {
+  font-family: var(--heading-5);
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.home h1 {
+  font-family: var(--heading);
+  font-size: 150px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  position: relative;
+  left: -12px;
+}
+
+.home p {
+  font-family: var(--heading-5);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.home .btn {
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  border: none;
+}
+
+.home .btn {
+  color: var(--dark-color);
+  font-size: 32px;
   text-transform: uppercase;
 }
