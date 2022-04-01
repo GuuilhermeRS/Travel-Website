@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+*:root {
+  --dark-color: #0b0d17;
+  --light-color: #ffffff;
+  --primary-color: #d0d6f9;
+
+  --heading: 'Bellefair', serif;
+  --heading-5: 'Barlow Condensed', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;;
+}
+
+body  {
+  background-image: url(./assets/background-home-desktop.jpg);
+  background-size: cover;
+}
