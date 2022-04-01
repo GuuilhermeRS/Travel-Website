@@ -18,3 +18,57 @@ body  {
   background-image: url(./assets/background-home-desktop.jpg);
   background-size: cover;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 40px 0 0 55px;
+}
+
+.header .line {
+  position: absolute;
+  height: 1px;
+  width: 46.875%;
+
+  right: 800px;
+
+  background-color: var(--light-color);
+}
+
+.nav {
+  width: 830px;
+  height: 96px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav .bg {
+  width: 830px;
+  height: 96px;
+  position: absolute;
+  z-index: -1;
+
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(300px);
+  opacity: .8;
+}
+
+.nav-container {
+  width: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav a{
+  text-decoration: none;
+  color: var(--light-color);
+
+  font-family: var(--heading-5);
+  font-size: 16px;
+  text-transform: uppercase;
+}
