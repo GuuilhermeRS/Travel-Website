@@ -6,7 +6,9 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Home />
+      <div className="content">
+        <Home /> 
+      </div>
     </div>
   );
 }
