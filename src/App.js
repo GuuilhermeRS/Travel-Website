@@ -1,13 +1,15 @@
 import React from 'react';
+import Destination from './components/Destination';
 import Header from './components/Header';
 import Home from './components/Home';
 
 export default function App() {
   return (
-    <div>
+    <div className='background'>
       <Header />
       <div className="content">
-        <Home /> 
+        {/* <Home /> */}
+        <Destination />
       </div>
     </div>
   );

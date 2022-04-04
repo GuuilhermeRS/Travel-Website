@@ -15,7 +15,7 @@
   color: var(--light-color);
 }
 
-body  {
+.background {
   background-image: url(./assets/background-home-desktop.jpg);
   background-size: cover;
 }
@@ -137,5 +137,100 @@ p {
 .home .btn {
   color: var(--dark-color);
   font-size: 32px;
+  text-transform: uppercase;
+}
+
+/* Destinations */
+
+.background {
+  background-image: url(./assets/background-destination-desktop.jpg);
+  background-size: cover;
+}
+
+h5 {
+  font-family: var(--heading-5);
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  margin-bottom: 60px;
+}
+
+h5 .strong {
+  opacity: .2;
+}
+
+h2 {
+  font-family: var(--heading);
+  font-size: 100px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.destinations {
+  display: flex;
+  width: 1440px;
+  align-items: space-between;
+  justify-content: space-around;
+}
+
+.planets-list {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.planets-list li a {
+  font-family: var(--heading-5);
+  font-size: 16px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.planets-list .active {
+  text-decoration: underline 4px; 
+}
+
+.description p {
+  font-family: var(--heading-5);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+
+  max-width: 380px;
+}
+
+.description hr {
+  opacity: .2;
+  margin-top: 54px;
+}
+
+.planet-desc {
+  display: flex;
+}
+
+.planet-desc .distance {
+  margin-right: 80px;
+}
+
+.subheading-1 {
+  font-family: var(--heading-1);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+
+  text-transform: uppercase;
+}
+
+.subheading-2 {
+  font-family: var(--heading-5);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 2.35px;
+
   text-transform: uppercase;
 }
