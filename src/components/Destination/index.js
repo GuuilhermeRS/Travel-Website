@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const planets = [
   { name: 'Moon', active: true, distance: '384,400 KM', time: '3 Days', img: '/image-moon.webp', desc: 'See our planet as you´ve never seen it before. A perfet relaxing trip away to help regain perspective and come back refreshed. While you´re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.' },
@@ -7,9 +7,24 @@ const planets = [
   { name: 'Titan', active: false, distance: '1.6 Bil. KM', time: '7 Years', img: '/image-titan.webp', desc: 'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.' },
 ]
 
-const currentPlanet = planets[1];
-
 function Destination() {
+  const [currentPlanet, setCurrentPlanet] = useState(planets[0]);
+
+  
+  function handleChangePlanet(e) {
+    const name = e.target.id;
+
+    setCurrentPlanet(planets.map(planet => planet.name === name
+        ? planet.active = true
+        : planet.active = false
+      )
+    )
+  }
+
+  useEffect(() => {
+    setCurrentPlanet(planets.filter(planet => planet.active === true)[0]);
+  }, [currentPlanet]);
+
   return (
     <div>
       <h5><strong className='strong'>01 </strong>Pick your destination</h5>
@@ -22,8 +37,18 @@ function Destination() {
 
           <ul className="planets-list">
           {planets.map(planet => (
-              <li key={planet.name} className={planet.active ? 'active' : ''}><a href="#">{planet.name}</a></li>
-            ))}
+            <li
+              key={planet.name}
+              className={planet.active ? 'active' : ''}
+            >
+              <a href="#"
+                id={planet.name}
+                onClick={handleChangePlanet}
+              >
+                {planet.name}
+              </a>
+            </li>
+          ))}
           </ul>
 
           <h2>{currentPlanet.name}</h2>
