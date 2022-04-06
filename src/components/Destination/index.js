@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+import { Bodytext, Heading2, Heading5, Subheading1, Subheading2 } from '../../styles/global';
+import { Section, Planet, PlanetList, PlanetInfo } from './styles';
+
 const planets = [
   { name: 'Moon', active: true, distance: '384,400 KM', time: '3 Days', img: '/image-moon.webp', desc: 'See our planet as you´ve never seen it before. A perfet relaxing trip away to help regain perspective and come back refreshed. While you´re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.' },
   { name: 'Mars', active: false, distance: '225 Mil. KM', time: '9 Months', img: '/image-mars.webp', desc: 'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!' },
@@ -26,16 +29,15 @@ function Destination() {
   }, [currentPlanet]);
 
   return (
-    <div>
-      <h5><strong className='strong'>01 </strong>Pick your destination</h5>
+    <Section>
+      <Heading5><strong className='strong'>01 </strong>Pick your destination</Heading5>
 
-      <div className="destinations">
-        <div className="img">
-          <img src={currentPlanet.img} alt="Moon Image" />
-        </div>
-        <div className="description">
+      <Planet>
+        <img src={currentPlanet.img} alt="Moon Image" />
+        
+        <div>
 
-          <ul className="planets-list">
+          <PlanetList>
           {planets.map(planet => (
             <li
               key={planet.name}
@@ -49,28 +51,27 @@ function Destination() {
               </a>
             </li>
           ))}
-          </ul>
+          </PlanetList>
 
-          <h2>{currentPlanet.name}</h2>
+          <Heading2>{currentPlanet.name}</Heading2>
 
-          <p>{currentPlanet.desc}</p>
-          <hr />
+          <Bodytext>{currentPlanet.desc}</Bodytext>
           
-          <div className="planet-desc">
-            <div className="distance">
-              <h6 className='subheading-2'>AVG. Distance</h6>
-              <h6 className='subheading-1'>{currentPlanet.distance}</h6>
+          <PlanetInfo>
+            <div>
+              <Subheading2>AVG. Distance</Subheading2>
+              <Subheading1>{currentPlanet.distance}</Subheading1>
             </div>
 
-            <div className="time">
-              <h6 className='subheading-2'>Est. Travel Time</h6>
-              <h6 className='subheading-1'>{currentPlanet.time}</h6>
+            <div>
+              <Subheading2>Est. Travel Time</Subheading2>
+              <Subheading1>{currentPlanet.time}</Subheading1>
 
             </div>
-          </div>
+          </PlanetInfo>
         </div>
-      </div>
-    </div>
+      </Planet>
+  </Section>
   );
 }
 

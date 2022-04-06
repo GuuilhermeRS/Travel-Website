@@ -74,17 +74,22 @@ export const Heading5 = styled.h5 `
 export const Subheading1 = styled.h6 `
   font-weight: 400;
   font-size: 28px;
+  text-transform: uppercase;
 `
 
 export const Subheading2 = styled.h6 `
   font-weight: 400;
   font-size: 14px;
+  color: ${colors.primary};
 
+  text-transform: uppercase;
   letter-spacing: 2.35px;
 `
 export const Bodytext = styled.p `
   font-weight: 400;
   font-size: 18px;
+
+  line-height: 32px;
 
   max-width: 450px;
 `
