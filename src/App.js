@@ -1,16 +1,20 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
 import Destination from './components/Destination';
 import Header from './components/Header';
-import Home from './components/Home';
+import Nav from './components/Header/Nav'
+import Routes from './Routes';
 
 export default function App() {
   return (
     <div className='background'>
-      <Header />
-      <div className="content">
-        {/* <Home /> */}
-        <Destination />
-      </div>
+      <BrowserRouter>
+        <Header />
+        <div className="content">
+          <Routes />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
