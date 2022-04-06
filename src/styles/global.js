@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const colors = {
   light: '#FFF',
@@ -10,7 +10,6 @@ export const fonts = {
   serif: `'Bellefair', serif`,
   sansSerif: `'Barlow Condensed', sans-serif`,
 }
-
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
@@ -29,60 +28,63 @@ export default createGlobalStyle`
     font-weight: 400;
     color: ${colors.light};
   }
+`
 
-  h1 {
-    font-family: ${fonts.serif};
-    font-weight: 400;
-    font-size: 150px;
-    
-    text-transform: uppercase;
-  }
+export const Heading1 = styled.h1`
+  font-family: ${fonts.serif};
+  font-weight: 400;
+  font-size: 150px;
+  
+  text-transform: uppercase;
+`
 
-  h2 {
-    font-family: ${fonts.serif};
-    font-weight: 400;
-    font-size: 100px;
+export const Heading2 = styled.h2 `
+  font-family: ${fonts.serif};
+  font-weight: 400;
+  font-size: 100px;
 
+  text-transform: uppercase;
+`
 
-    text-transform: uppercase;
-  }
+export const Heading3 = styled.h3 `
+  font-family: ${fonts.serif};
+  font-weight: 400;
+  font-size: 56px;
 
-  h3 {
-    font-family: ${fonts.serif};
-    font-weight: 400;
-    font-size: 56px;
+  text-transform: uppercase;
+`
 
-    text-transform: uppercase;
-  }
+export const Heading4 = styled.h4 `
+  font-family: ${fonts.serif};
+  font-weight: 400;
+  font-size: 32px;
 
-  h4 {
-    font-family: ${fonts.serif};
-    font-weight: 400;
-    font-size: 32px;
+  text-transform: uppercase;
+`
 
-    text-transform: uppercase;
-  }
+export const Heading5 = styled.h5 `
+  font-weight: 400;
+  font-size: 28px;
 
-  h5 {
-    font-weight: 400;
-    font-size: 28px;
+  letter-spacing: 4.75px;
 
-    letter-spacing: 4.75px;
+  text-transform: uppercase;
+`
 
-    text-transform: uppercase;
-  }
+export const Subheading1 = styled.h6 `
+  font-weight: 400;
+  font-size: 28px;
+`
 
-  h6 {
-    font-weight: 400;
-    font-size: 28px;
-  }
+export const Subheading2 = styled.h6 `
+  font-weight: 400;
+  font-size: 14px;
 
-  p {
-    font-weight: 400;
-    font-size: 18px;
+  letter-spacing: 2.35px;
+`
+export const Bodytext = styled.p `
+  font-weight: 400;
+  font-size: 18px;
 
-    max-width: 450px;
-  }
-
-
+  max-width: 450px;
 `
