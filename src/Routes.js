@@ -7,7 +7,7 @@ import Destination from './components/Destination';
 export default function Routes() {
   return(
     <Switch>
-      <Route exact path={"/"} component={Home} />
+      <Route exact path="/" component={Home} />
       <Route path="/destination" component={Destination} />
     </Switch>
   )

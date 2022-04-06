@@ -11,9 +11,7 @@ export default function App() {
     <BrowserRouter>
       <GlobalStyles />
       <Header />
-      <div className="content">
-        <Routes />
-      </div>
+      <Routes />
     </BrowserRouter>    
   );
 }

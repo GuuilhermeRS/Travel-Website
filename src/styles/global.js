@@ -3,10 +3,10 @@ import { createGlobalStyle } from "styled-components";
 export const colors = {
   light: '#FFF',
   dark: '#0B0D17',
-  blue: '#D0D6F9',
+  primary: '#D0D6F9',
 }
 
-const fonts = {
+export const fonts = {
   serif: `'Bellefair', serif`,
   sansSerif: `'Barlow Condensed', sans-serif`,
 }
@@ -21,7 +21,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${colors.blue};
+    background: ${colors.primary};
     background-image: url(./background-home-desktop.jpg);
     background-size: cover;
 
@@ -81,7 +81,7 @@ export default createGlobalStyle`
     font-weight: 400;
     font-size: 18px;
 
-    max-width: 540px;
+    max-width: 450px;
   }
 
 
