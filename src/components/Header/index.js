@@ -1,18 +1,14 @@
 import React from 'react';
 
+import { Container } from './styles';
 import Nav from './Nav';
 
 function Header() {
   return (
-    <header className="header">
-      <div className="logo">
-        <img src="/logo.svg" alt="Website Logo" />
-      </div>
-      
-      <div className="line"></div>
-
+    <Container>
+      <img src="/logo.svg" alt="Website Logo" />
       <Nav />
-    </header>
+    </Container>
   );
 }
 

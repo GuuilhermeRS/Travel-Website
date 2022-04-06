@@ -8,14 +8,12 @@ import Routes from './Routes';
 
 export default function App() {
   return (
-    <div className='background'>
-      <BrowserRouter>
+    <BrowserRouter>
       <GlobalStyles />
-        <Header />
-        <div className="content">
-          <Routes />
-        </div>
-      </BrowserRouter>
-    </div>
+      <Header />
+      <div className="content">
+        <Routes />
+      </div>
+    </BrowserRouter>    
   );
 }

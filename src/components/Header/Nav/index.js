@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+import { Navbar } from "./styles";
+
 function Nav() {
   return(
-    <nav className="nav">
-      <div className="bg"></div>
-      <div className="nav-container">
-        <Link to="/"><strong>00 </strong>Home</Link>
-        <Link to="/destination"><strong>01 </strong>Destination</Link>
-        <Link to="/crew"><strong>02 </strong>Crew</Link>
-        <Link to="/tech"><strong>03 </strong>Technology</Link>
-      </div>
-    </nav>
+    <Navbar>
+
+      <Link to="/" className="active"><span>00 </span>Home</Link>
+      <Link to="/destination" ><span>01 </span>Destination</Link>
+      <Link to="/crew" ><span>02 </span>Crew</Link>
+      <Link to="/tech" ><span>03 </span>Technology</Link>
+
+    </Navbar>
   )
 }
 

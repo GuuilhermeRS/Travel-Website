@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const colors = {
+export const colors = {
   light: '#FFF',
   dark: '#0B0D17',
   blue: '#D0D6F9',
@@ -14,6 +14,11 @@ const fonts = {
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
   body {
     background: ${colors.blue};
